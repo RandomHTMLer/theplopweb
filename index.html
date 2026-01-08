@@ -1,121 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>The Plop Web – Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f4ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+<h2>Login</h2>
+<input id="loginUser" placeholder="Username">
+<input id="loginPass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
 
-        .container {
-            background: white;
-            padding: 30px;
-            width: 350px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+<hr>
 
-        h1 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        input, select {
-            width: 90%;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            width: 95%;
-            padding: 12px;
-            background: #4a6cff;
-            border: none;
-            color: white;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background: #3a57d6;
-        }
-
-        .toggle {
-            margin-top: 15px;
-            color: #4a6cff;
-            cursor: pointer;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>The Plop Web</h1>
-
-    <!-- LOGIN FORM -->
-    <div id="loginBox">
-        <h2>Log In</h2>
-        <input id="loginUser" type="text" placeholder="Username">
-        <input id="loginPass" type="password" placeholder="Password">
-        <button onclick="login()">Log In</button>
-
-        <div class="toggle" onclick="showSignup()">Create an account</div>
-    </div>
-
-    <!-- SIGNUP FORM -->
-    <div id="signupBox" style="display:none;">
-        <h2>Create Account</h2>
-        <input id="signupUser" type="text" placeholder="Choose a username">
-        <input id="signupPass" type="password" placeholder="Choose a password">
-
-        <select id="signupYear">
-            <option value="">Select your year group</option>
-            <option>Year 3</option>
-            <option>Year 4</option>
-            <option>Year 5</option>
-            <option>Year 6</option>
-        </select>
-
-        <button onclick="signup()">Create Account</button>
-
-        <div class="toggle" onclick="showLogin()">Back to login</div>
-    </div>
-</div>
-
-<script>
-    function showSignup() {
-        document.getElementById("loginBox").style.display = "none";
-        document.getElementById("signupBox").style.display = "block";
-    }
-
-    function showLogin() {
-        document.getElementById("signupBox").style.display = "none";
-        document.getElementById("loginBox").style.display = "block";
-    }
-
-    function login() {
-        // For now, just go to the home page
-        window.location.href = "home.html";
-    }
-
-    function signup() {
-        // For now, just go to the home page
-        window.location.href = "home.html";
-    }
-</script>
-
-</body>
-</html>
+<h2>Create Account</h2>
+<input id="signupUser" placeholder="Username">
+<input id="signupPass" type="password" placeholder="Password">
+<input id="signupYear" placeholder="Year Group (e.g. 3, 4, 5, 6)">
+<button onclick="signup()">Sign Up</button>
